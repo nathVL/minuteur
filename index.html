@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Chronomètre</title>
+  </head>
+  <body>
+    <div id="wrapper">
+
+        <div id="chrono">
+            <div id="btnAjout">
+                <button id="plusDizaine" class="upButton"></button>
+                <button id="plusUnite" class="upButton"></button>
+            </div>
+            
+            <p id="countdown">00:30:0</p>
+    
+            <div id="btnReduction">
+                <button id="moinsDizaine" class="downButton"></button>
+                <button id="moinsUnite" class="downButton"></button>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button id="startButton" class="button">Démarrer</button>
+            <button id="resetButton" class="button">Réinitialiser</button>
+            <button id="pauseButton" class="button">Pause</button>
+        </div>
+        
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
