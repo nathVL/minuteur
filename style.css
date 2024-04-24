@@ -31,33 +31,42 @@ body {
 
 
 /* Styles des boutons */
-.upButton {
+.upButton, .downButton {
     width: 0;
     height: 0;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+}
+
+.upButton {
     border-top: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
     border-bottom: 20px solid black;
+}
+
+#plusDizaineMin, #moinsDizaineMin {
+    margin-left: 100px;
+}
+
+.minute {
+    margin-right: 70px;
+}
+
+.downButton {
+    border-top: 20px solid black;
+    border-bottom: 0;
+}
+
+#btnReduction > .minute, #btnReduction > .seconde {
+    display: flex;
+}
+#moinsDizaineMin, #moinsDizaineSec {
+    margin-right: 40px;
 }
 
 #btnAjout, #btnReduction {
     display: flex;
     flex-direction: row;
 }
-
-.minute {
-    margin-right: 200px;
-}
-
-.downButton {
-    width: 0;
-    height: 0;
-    border-top: 20px solid black;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 0;
-}
-
 
 .button {
     font-size: 25px;
@@ -81,3 +90,6 @@ body {
     background-color: #3a6eff;
     color: white;
 }
+
+
+
