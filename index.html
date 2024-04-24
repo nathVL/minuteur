@@ -10,25 +10,42 @@
     <div id="wrapper">
 
         <div id="chrono">
-            <div id="btnAjout">
-                <button id="plusDizaine" class="upButton"></button>
-                <button id="plusUnite" class="upButton"></button>
+          <div id="btnAjout">
+            
+            <div class="minute">
+              <button id="plusDizaineMin" class="upButton"></button>
+              <button id="plusUniteMin" class="upButton"></button>
+            </div>
+
+            <div class="seconde">
+              <button id="plusDizaineSec" class="upButton"></button>
+            <button id="plusUniteSec" class="upButton"></button>
             </div>
             
-            <p id="countdown">00:30:0</p>
+          </div>
+            
+          <p id="countdown">00:30:0</p>
     
             <div id="btnReduction">
-                <button id="moinsDizaine" class="downButton"></button>
-                <button id="moinsUnite" class="downButton"></button>
+
+              <div class="minute">
+                <button id="moinsDizaineMin" class="downButton"></button>
+                <button id="moinsUniteMin" class="downButton"></button>
+              </div>
+
+              <div class="seconde">
+                <button id="moinsDizaineSec" class="downButton"></button>
+              <button id="moinsUniteSec" class="downButton"></button>
+              </div>
+              
             </div>
         </div>
         
         <div class="buttons">
-            <button id="startButton" class="button">Démarrer</button>
-            <button id="resetButton" class="button">Réinitialiser</button>
-            <button id="pauseButton" class="button">Pause</button>
+          <button id="startButton" class="button">Démarrer</button>
+          <button id="resetButton" class="button">Réinitialiser</button>
+          <button id="pauseButton" class="button">Pause</button>
         </div>
-        
     </div>
     <script src="./app.js"></script>
   </body>
