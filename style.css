@@ -74,6 +74,21 @@ p {
     cursor: pointer;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 1000px) {
+    .buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        margin-top: 20px;
+    }
+}
+
 #startButton {
     margin-right: 15px;
 }
