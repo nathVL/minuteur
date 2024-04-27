@@ -5,48 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="./style.css" />
     <title>Chronomètre</title>
+    <script src="./app.js" defer></script>
   </head>
   <body>
     <div id="wrapper">
-
-        <div id="chrono">
-          <div id="btnAjout">
-
-            <div class="minute">
-              <button id="plusDizaineMin" class="upButton"></button>
-              <button id="plusUniteMin" class="upButton"></button>
-            </div>
-
-            <div class="seconde">
-              <button id="plusDizaineSec" class="upButton"></button>
+      <table>
+        <tr>
+          <td>
+            <button id="plusDizaineMin" class="upButton"></button>
+            <button id="plusUniteMin" class="upButton"></button>
+          </td>
+          <td></td>
+          <td>
+            <button id="plusDizaineSec" class="upButton"></button>
             <button id="plusUniteSec" class="upButton"></button>
-            </div>
-            
-          </div>
-            
-          <p id="countdown">00:30:0</p>
-    
-            <div id="btnReduction">
-
-              <div class="minute">
-                <button id="moinsDizaineMin" class="downButton"></button>
-                <button id="moinsUniteMin" class="downButton"></button>
-              </div>
-
-              <div class="seconde">
-                <button id="moinsDizaineSec" class="downButton"></button>
-                <button id="moinsUniteSec" class="downButton"></button>
-              </div>
-              
-            </div>
-        </div>
-        
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p id="minute">00</p>
+          </td>
+          <td>
+            <p>:</p>
+          </td>
+          <td>
+            <p id="seconde">30</p>
+          </td>
+          <td>
+            <p>:</p>
+          </td>
+          <td>
+            <p id="dsec">0</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="moinsDizaineMin" class="downButton"></button>
+            <button id="moinsUniteMin" class="downButton"></button>
+          </td>
+          <td></td>
+          <td>
+            <button id="moinsDizaineSec" class="downButton"></button>
+            <button id="moinsUniteSec" class="downButton"></button>
+          </td>
+        </tr>
+      </table>
         <div class="buttons">
           <button id="startButton" class="button">Démarrer</button>
           <button id="resetButton" class="button">Réinitialiser</button>
           <button id="pauseButton" class="button">Pause</button>
         </div>
     </div>
-    <script src="./app.js"></script>
   </body>
 </html>

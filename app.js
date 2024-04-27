@@ -1,5 +1,13 @@
 // Constantes et declaration de variable
 const countdown = document.getElementById("countdown");
+
+const minuteAff = document.getElementById("minute");
+const secondeAff = document.getElementById("seconde");
+const dsecAff = document.getElementById("dsec");
+
+
+
+
 const startButton = document.getElementById("startButton");
 const resetButton = document.getElementById("resetButton");
 const pauseButton = document.getElementById("pauseButton");
@@ -91,7 +99,10 @@ function zeroDevant(val) {
 function afficherTemps(minute=0, seconde=0, dsec=0) {
     let minAfficher = zeroDevant(minute);
     let secAfficher = zeroDevant(seconde);
-    countdown.innerHTML = `${minAfficher}:${secAfficher}:${dsec}`;
+
+    minuteAff.innerHTML = minAfficher;
+    secondeAff.innerHTML = secAfficher;
+    dsecAff.innerHTML = dsec;
 }
 
 /**

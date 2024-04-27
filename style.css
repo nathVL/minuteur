@@ -1,8 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
+}
 
 body {
     height: 100vh;
@@ -17,16 +16,25 @@ body {
     padding: 100px;
     border-radius: 30px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-#chrono {
-    text-align: center;
-    font-size: 100px;
-    margin-bottom: 30px;
-  }
+/* table */
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
 
-.hidden {
-    display: none;
+td {
+    text-align: center;
+}
+
+p {
+    font-size: 100px;
 }
 
 
@@ -43,14 +51,6 @@ body {
     border-bottom: 20px solid black;
 }
 
-#plusDizaineMin, #moinsDizaineMin {
-    margin-left: 100px;
-}
-
-.minute {
-    margin-right: 70px;
-}
-
 .downButton {
     border-top: 20px solid black;
     border-bottom: 0;
@@ -58,9 +58,6 @@ body {
 
 #btnReduction > .minute, #btnReduction > .seconde {
     display: flex;
-}
-#moinsDizaineMin, #moinsDizaineSec {
-    margin-right: 40px;
 }
 
 #btnAjout, #btnReduction {
@@ -91,5 +88,6 @@ body {
     color: white;
 }
 
-
-
+#plusDizaineMin, #plusDizaineSec, #moinsDizaineMin, #moinsDizaineSec {
+    margin-right: 1rem;
+}
