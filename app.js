@@ -1,13 +1,9 @@
 // Constantes et declaration de variable
-const countdown = document.getElementById("countdown");
-
+// Temps
 const minuteAff = document.getElementById("minute");
 const secondeAff = document.getElementById("seconde");
 const dsecAff = document.getElementById("dsec");
-
-
-
-
+// Boutons
 const startButton = document.getElementById("startButton");
 const resetButton = document.getElementById("resetButton");
 const pauseButton = document.getElementById("pauseButton");
@@ -19,7 +15,7 @@ const plusDizaineSec = document.getElementById("plusDizaineSec");
 const plusUniteSec = document.getElementById("plusUniteSec");
 const moinsDizaineSec = document.getElementById("moinsDizaineSec");
 const moinsUniteSec = document.getElementById("moinsUniteSec");
-
+// Variable
 let time;
 let timeIni = {
     "dsec": 0,
@@ -28,7 +24,6 @@ let timeIni = {
 };
 let intervalId;
 let estArrete = true;
-
 
 // Fonctions
 /**
@@ -121,22 +116,24 @@ function passerMinutes() {
  * @param {number} [minute=0] - Le nombre de minutes à retirer.
  */
 function retirerTemps(sec, minute = 0) {
-    if (timeIni.minute - minute >= 0) {
-        timeIni.minute -= minute;
-    }
-    if (sec != 0) {
-        if (timeIni.minute > 0) {
-            if (timeIni.seconde - sec >= 0) {
-                timeIni.seconde -= sec
+    if(estArrete) {
+        if (timeIni.minute - minute >= 0) {
+            timeIni.minute -= minute;
+        }
+        if (sec != 0) {
+            if (timeIni.minute > 0) {
+                if (timeIni.seconde - sec >= 0) {
+                    timeIni.seconde -= sec
+                } else {
+                    timeIni.minute--;
+                    timeIni.seconde = 60 - sec + timeIni.seconde;
+                }
             } else {
-                timeIni.minute--;
-                timeIni.seconde = 60 - sec + timeIni.seconde;
-            }
-        } else {
-            if (timeIni.seconde - sec >= 0) {
-                timeIni.seconde -= sec;
-        }}}
-    afficherTemps(timeIni.minute, timeIni.seconde);
+                if (timeIni.seconde - sec >= 0) {
+                    timeIni.seconde -= sec;
+            }}}
+        afficherTemps(timeIni.minute, timeIni.seconde);
+    }
 }
 
 /**
@@ -145,13 +142,15 @@ function retirerTemps(sec, minute = 0) {
  * @param {number} [minute=0] - Le nombre de minutes à ajouter.
  */
 function ajouterTemps(sec, minute = 0) {
-    timeIni.seconde += sec;
-    timeIni.minute += minute;
-    passerMinutes();
-    afficherTemps(timeIni.minute, timeIni.seconde);
+    if(estArrete) {
+        timeIni.seconde += sec;
+        timeIni.minute += minute;
+        passerMinutes();
+        afficherTemps(timeIni.minute, timeIni.seconde);
+    }
 }
 
-// Controles des boutons
+// Controle des boutons
 plusDizaineSec.addEventListener("click", () => ajouterTemps(10));
 plusUniteSec.addEventListener("click",  () => ajouterTemps(1));
 plusDizaineMin.addEventListener("click",  () => ajouterTemps(0, 10));
