@@ -56,7 +56,7 @@ function StartTimer(timeSeconds, timeMinutes = 0) {
  * Réinitialise le timer et affiche le temps initial.
  */
 function resetTimer() {
-    estArrete = false;
+    estArrete = true;
     clearInterval(intervalId);
     afficherTemps(timeIni.minute, timeIni.seconde);
 }
